@@ -28,12 +28,14 @@ export function ShareModal({
       setLoading(false);
     }
   }, [isOpen]);
-  return (
+
+  return isOpen && (
     <ReactModal
       isOpen={isOpen}
       onRequestClose={onClose}
       contentLabel="Share Options Modal"
       className="plugin-modal session-share-plugin"
+      portalClassName="modal-low"
       overlayClassName="modal-overlay"
     >
       <div
