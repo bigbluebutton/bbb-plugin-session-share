@@ -36,6 +36,7 @@ export function ShareModal({
       contentLabel="Share Options Modal"
       className="plugin-modal session-share-plugin"
       portalClassName="modal-low"
+      parentSelector={() => document.querySelector('#modals-container')}
       overlayClassName="modal-overlay"
     >
       <div
