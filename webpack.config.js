@@ -5,8 +5,8 @@ const path = require('path');
 module.exports = {
   entry: './src/index.tsx',
   output: {
-    filename: 'SessionSharePlugin.js',
-    library: 'SessionSharePlugin',
+    filename: 'BbbPluginSessionShare.js',
+    library: 'BbbPluginSessionShare',
     libraryTarget: 'umd',
     publicPath: '/',
     globalObject: 'this',
