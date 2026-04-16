@@ -14,7 +14,7 @@ This plugin allows the user to share the current session in two ways:
 To build the plugin for production use, follow these steps:
 
 ```bash
-cd $HOME/src/plugin-session-share
+cd $HOME/src/bbb-plugin-session-share
 npm ci
 npm run build-bundle
 ```
