@@ -14,12 +14,12 @@ This plugin allows the user to share the current session in two ways:
 To build the plugin for production use, follow these steps:
 
 ```bash
-cd $HOME/src/plugin-session-share
+cd $HOME/src/bbb-plugin-session-share
 npm ci
 npm run build-bundle
 ```
 
-The above commands will generate the `dist` folder, containing the bundled JavaScript file named `SessionSharePlugin.js`. This file can be hosted on any HTTPS server along with its `manifest.json`.
+The above commands will generate the `dist` folder, containing the bundled JavaScript file named `BbbPluginSessionShare.js`. This file can be hosted on any HTTPS server along with its `manifest.json`.
 
 If you install the plugin separated from the manifest, remember to change the `javascriptEntrypointUrl` in the `manifest.json` to the correct endpoint.
 

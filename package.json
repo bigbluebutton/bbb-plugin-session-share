@@ -1,6 +1,6 @@
 {
-  "name": "session-share",
-  "version": "0.1.1",
+  "name": "bbb-plugin-session-share",
+  "version": "0.0.1",
   "private": true,
   "main": "./src/index.tsx",
   "dependencies": {
