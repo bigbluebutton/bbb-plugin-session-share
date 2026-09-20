@@ -1,0 +1,20 @@
+{
+  "plugin.sessionShare.toolbar.invite": "会議の共有",
+  "plugin.sessionShare.title.shareOptions": "共有方法を選択",
+  "plugin.sessionShare.title.joinMeeting": "QRコードから参加してください",
+  "plugin.sessionShare.title.shareCurrentSession": "別のデバイスでこのセッションを開いてください",
+  "plugin.sessionShare.option.inviteOtherUsers": "他のユーザーを招待",
+  "plugin.sessionShare.option.shareMySession": "このセッションを別のデバイスで開く",
+  "plugin.sessionShare.button.confirm": "表示",
+  "plugin.sessionShare.button.close": "閉じる",
+  "plugin.sessionShare.button.copyUrl": "URLをコピー",
+  "plugin.sessionShare.button.fullScreen": "全画面表示",
+  "plugin.sessionShare.status.copied": "クリップボードにコピーしました。",
+  "plugin.sessionShare.field.shareUrl": "共有URL",
+  "plugin.sessionShare.error.popupBlocked": "共有ウインドウがブラウザによってブロックされました。このサイトのポップアップを許可してください。",
+  "plugin.sessionShare.error.meetingLoading": "会議情報を読み込んでいます。しばらくしてからもう一度お試しください。",
+  "plugin.sessionShare.error.invitationUrlUnavailable": "この会議には招待URLが設定されていません。",
+  "plugin.sessionShare.error.shareUrlFailed": "共有URLを作成できませんでした。",
+  "plugin.sessionShare.error.fullScreenFailed": "全画面表示に切り替えられませんでした。",
+  "plugin.sessionShare.error.copyFailed": "URLをコピーできませんでした。URLは選択状態になっているので、手動でコピーしてください。"
+}
