@@ -51,6 +51,11 @@ const intlMessages = defineMessages({
     defaultMessage: 'Full screen',
     description: 'Button for entering full-screen mode',
   },
+  exitFullScreen: {
+    id: 'plugin.sessionShare.button.exitFullScreen',
+    defaultMessage: 'Exit full screen',
+    description: 'Button for leaving full-screen mode',
+  },
   copied: {
     id: 'plugin.sessionShare.status.copied',
     defaultMessage: 'Copied to clipboard.',
