@@ -5,10 +5,10 @@ import {
   ActionsBarButton, ActionsBarInterface, ActionsBarPosition,
   ActionsBarSeparator, AppsGalleryEntry, BbbPluginSdk, PluginApi,
 } from 'bigbluebutton-html-plugin-sdk';
+import { createIntl, createIntlCache } from 'react-intl';
 import { SessionSharePluginProps } from './types';
 import { ShareWindow } from '../config-modal/modal';
 
-import { createIntl, createIntlCache } from 'react-intl';
 import intlMessages from '../i18n';
 
 const intlCache = createIntlCache();
@@ -148,20 +148,18 @@ function SessionSharePlugin({
       ]);
     } else {
       // BBB 3.0 -> Action bar
-      const buttonToUserListItem: ActionsBarInterface =
-        new ActionsBarButton({
-          icon: {
-            iconName: 'add',
-          },
-          tooltip: label,
-          onClick: openShareWindow,
-          position: ActionsBarPosition.RIGHT,
-        });
+      const buttonToUserListItem: ActionsBarInterface = new ActionsBarButton({
+        icon: {
+          iconName: 'add',
+        },
+        tooltip: label,
+        onClick: openShareWindow,
+        position: ActionsBarPosition.RIGHT,
+      });
 
-      const dropdownToUserListItem: ActionsBarInterface =
-        new ActionsBarSeparator({
-          position: ActionsBarPosition.RIGHT,
-        });
+      const dropdownToUserListItem: ActionsBarInterface = new ActionsBarSeparator({
+        position: ActionsBarPosition.RIGHT,
+      });
 
       pluginApi.setActionsBarItems([
         dropdownToUserListItem,
