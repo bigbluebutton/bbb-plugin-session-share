@@ -168,4 +168,15 @@
         cursor: pointer;
         margin-bottom: 15px;
     }
+
+    .share-url-field {
+      margin-inline: auto;
+      box-sizing: border-box;
+    }
+
+    .error-message {
+        margin-top: 15px;
+        color: #b00020;
+        text-align: center;
+    }
 }
