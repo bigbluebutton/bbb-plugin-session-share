@@ -74,6 +74,7 @@ function SessionSharePlugin({
     );
 
     if (!popup) {
+      // eslint-disable-next-line no-alert
       window.alert(
         intl.formatMessage(intlMessages.popupBlocked),
       );
