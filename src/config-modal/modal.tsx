@@ -153,6 +153,7 @@ export function ShareWindow({
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const [copied, setCopied] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const shareUrlInputRef = React.useRef<HTMLInputElement>(null);
 
   let screenTitle = intl.formatMessage(intlMessages.shareOptions);
@@ -192,6 +193,33 @@ export function ShareWindow({
       popupWindow.resizeTo(460, 360);
     }
   }, [popupWindow, newJoinUrl]);
+
+  React.useEffect(() => {
+    if (!popupWindow) {
+      setIsFullscreen(false);
+      return undefined;
+    }
+
+    const popupDocument = popupWindow.document;
+
+    const handleFullscreenChange = () => {
+      setIsFullscreen(Boolean(popupDocument.fullscreenElement));
+    };
+
+    handleFullscreenChange();
+
+    popupDocument.addEventListener(
+      'fullscreenchange',
+      handleFullscreenChange,
+    );
+
+    return () => {
+      popupDocument.removeEventListener(
+        'fullscreenchange',
+        handleFullscreenChange,
+      );
+    };
+  }, [popupWindow]);
 
   const handleConfirm = async () => {
     setLoading(true);
@@ -395,7 +423,11 @@ export function ShareWindow({
               type="button"
               onClick={handleFullscreen}
             >
-              {intl.formatMessage(intlMessages.fullScreen)}
+              {intl.formatMessage(
+                isFullscreen
+                  ? intlMessages.exitFullScreen
+                  : intlMessages.fullScreen,
+              )}
             </button>
 
             <button
