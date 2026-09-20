@@ -259,6 +259,7 @@ export function ShareWindow({
           return;
         }
       } catch (fallbackError) {
+		// Continue to the manual-copy fallback below.
       }
 
       // Enable manual copying even when every copying method failed
