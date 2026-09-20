@@ -9,6 +9,7 @@
   "plugin.sessionShare.button.close": "閉じる",
   "plugin.sessionShare.button.copyUrl": "URLをコピー",
   "plugin.sessionShare.button.fullScreen": "全画面表示",
+  "plugin.sessionShare.button.exitFullScreen": "全画面表示を終了",
   "plugin.sessionShare.status.copied": "クリップボードにコピーしました。",
   "plugin.sessionShare.field.shareUrl": "共有URL",
   "plugin.sessionShare.error.popupBlocked": "共有ウインドウがブラウザによってブロックされました。このサイトのポップアップを許可してください。",
