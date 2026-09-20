@@ -229,7 +229,7 @@ export function ShareWindow({
     setErrorMessage('');
 
     try {
-      const clipboard = popupWindow.navigator.clipboard;
+      const { clipboard } = popupWindow.navigator;
 
       if (clipboard && popupWindow.isSecureContext) {
         await clipboard.writeText(newJoinUrl);
@@ -259,7 +259,6 @@ export function ShareWindow({
           return;
         }
       } catch (fallbackError) {
-		// Continue to the manual-copy fallback below.
       }
 
       // Enable manual copying even when every copying method failed
@@ -403,7 +402,7 @@ export function ShareWindow({
               className="secondary"
               onClick={onClose}
             >
-	      {intl.formatMessage(intlMessages.close)}
+              {intl.formatMessage(intlMessages.close)}
             </button>
           </div>
         </>
