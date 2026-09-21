@@ -179,7 +179,27 @@ export function ShareWindow({
     setErrorMessage('');
     setCopied(false);
 
-    return () => style.remove();
+    let secondFrameId: number | undefined;
+    const firstFrameId = popupWindow.requestAnimationFrame(() => {
+      secondFrameId = popupWindow.requestAnimationFrame(() => {
+        if (popupWindow.closed) return;
+        const { body } = popupWindow.document;
+        // Force style recalculation after the mobile popup tab
+        // has obtained its final viewport size.
+        body.style.minWidth = '0px';
+        body.getBoundingClientRect();
+        body.style.removeProperty('min-width');
+      });
+    });
+
+    return () => {
+      popupWindow.cancelAnimationFrame(firstFrameId);
+      if (secondFrameId !== undefined) {
+        popupWindow.cancelAnimationFrame(secondFrameId);
+      }
+      style.remove();
+    };
+
   }, [popupWindow]);
 
   React.useEffect(() => {
