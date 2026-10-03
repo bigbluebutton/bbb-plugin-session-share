@@ -199,7 +199,6 @@ export function ShareWindow({
       }
       style.remove();
     };
-
   }, [popupWindow]);
 
   React.useEffect(() => {
