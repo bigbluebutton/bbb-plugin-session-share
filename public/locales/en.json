@@ -1,8 +1,8 @@
 {
   "plugin.sessionShare.toolbar.invite": "Share Session",
-  "plugin.sessionShare.title.shareOptions": "Choose How to Share",
-  "plugin.sessionShare.title.joinMeeting": "Join Meeting Using This QR Code",
-  "plugin.sessionShare.title.shareCurrentSession": "Open This Session on Another Device",
+  "plugin.sessionShare.title.shareOptions": "Choose how to share",
+  "plugin.sessionShare.title.joinMeeting": "Join meeting using this QR code",
+  "plugin.sessionShare.title.shareCurrentSession": "Open this session on another device",
   "plugin.sessionShare.option.inviteOtherUsers": "Invite other users",
   "plugin.sessionShare.option.shareMySession": "Open my session on another device",
   "plugin.sessionShare.button.confirm": "Confirm",
