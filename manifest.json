@@ -1,7 +1,7 @@
 {
-  "requiredSdkVersion": "~0.0.59",
+  "requiredSdkVersion": "~0.0.73 || ^0.1.2",
   "name": "BbbPluginSessionShare",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "javascriptEntrypointUrl": "BbbPluginSessionShare.js",
-  "localesBaseUrl": "https://cdn.domain.com/pluginabc/"
+  "localesBaseUrl": "locales"
 }

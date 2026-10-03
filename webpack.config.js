@@ -12,6 +12,13 @@ module.exports = {
     globalObject: 'this',
   },
   devServer: {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods':
+        'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+      'Access-Control-Allow-Headers':
+        'X-Requested-With, content-type, Authorization, ngrok-skip-browser-warning',
+    },
     allowedHosts: 'all',
     port: 4701,
     host: '0.0.0.0',
@@ -58,6 +65,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: 'manifest.json', to: './' }, // Copy manifest.json to static/ in the output folder
+        { from: 'public/locales/', to: './locales/' },
       ],
     }),
   ],

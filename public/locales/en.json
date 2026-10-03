@@ -1,0 +1,21 @@
+{
+  "plugin.sessionShare.toolbar.invite": "Share Session",
+  "plugin.sessionShare.title.shareOptions": "Choose how to share",
+  "plugin.sessionShare.title.joinMeeting": "Join meeting using this QR code",
+  "plugin.sessionShare.title.shareCurrentSession": "Open this session on another device",
+  "plugin.sessionShare.option.inviteOtherUsers": "Invite other users",
+  "plugin.sessionShare.option.shareMySession": "Open my session on another device",
+  "plugin.sessionShare.button.confirm": "Confirm",
+  "plugin.sessionShare.button.close": "Close",
+  "plugin.sessionShare.button.copyUrl": "Copy URL",
+  "plugin.sessionShare.button.fullScreen": "Fullscreen",
+  "plugin.sessionShare.button.exitFullScreen": "Exit fullscreen",
+  "plugin.sessionShare.status.copied": "Copied to clipboard.",
+  "plugin.sessionShare.field.shareUrl": "Share URL",
+  "plugin.sessionShare.error.popupBlocked": "The share window was blocked by the browser. Please allow pop-ups for this site.",
+  "plugin.sessionShare.error.meetingLoading": "Meeting information is still loading. Please try again.",
+  "plugin.sessionShare.error.invitationUrlUnavailable": "An invitation URL was not provided for this meeting.",
+  "plugin.sessionShare.error.shareUrlFailed": "Failed to create the share URL.",
+  "plugin.sessionShare.error.fullScreenFailed": "The browser could not enter full-screen mode.",
+  "plugin.sessionShare.error.copyFailed": "Could not copy the URL. The URL has been selected; copy it manually."
+}
