@@ -6,6 +6,7 @@ import { IntlShape } from 'react-intl';
 import intlMessages from '../i18n';
 
 interface ShareWindowProps {
+    hasInviteUrl: boolean;
     intl: IntlShape;
     popupWindow: Window | null;
     newJoinUrl: string;
@@ -147,9 +148,9 @@ const POPUP_STYLES = `
 `;
 
 export function ShareWindow({
-  intl, popupWindow, newJoinUrl, onClose, onConfirm,
+  hasInviteUrl, intl, popupWindow, newJoinUrl, onClose, onConfirm,
 }: ShareWindowProps) {
-  const [shareType, setShareType] = useState('inviteUsers');
+  const [shareType, setShareType] = useState(hasInviteUrl ? 'inviteUsers' : 'shareSession');
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const [copied, setCopied] = useState(false);
@@ -174,7 +175,6 @@ export function ShareWindow({
     style.textContent = POPUP_STYLES;
     popupWindow.document.head.appendChild(style);
 
-    setShareType('inviteUsers');
     setLoading(false);
     setErrorMessage('');
     setCopied(false);
@@ -200,6 +200,14 @@ export function ShareWindow({
       style.remove();
     };
   }, [popupWindow]);
+
+  React.useEffect(() => {
+    if (popupWindow) {
+      setShareType(
+        hasInviteUrl ? 'inviteUsers' : 'shareSession',
+      );
+    }
+  }, [popupWindow, hasInviteUrl]);
 
   React.useEffect(() => {
     if (!popupWindow || popupWindow.closed) return;
@@ -349,17 +357,19 @@ export function ShareWindow({
       {!newJoinUrl ? (
         <>
           <form className="share-options">
-            <label htmlFor="invite-others">
-              <input
-                type="radio"
-                name="shareType"
-                id="invite-others"
-                value="inviteUsers"
-                checked={shareType === 'inviteUsers'}
-                onChange={() => setShareType('inviteUsers')}
-              />
-              {intl.formatMessage(intlMessages.inviteOtherUsers)}
-            </label>
+            {hasInviteUrl ? (
+              <label htmlFor="invite-others">
+                <input
+                  type="radio"
+                  name="shareType"
+                  id="invite-others"
+                  value="inviteUsers"
+                  checked={shareType === 'inviteUsers'}
+                  onChange={() => setShareType('inviteUsers')}
+                />
+                {intl.formatMessage(intlMessages.inviteOtherUsers)}
+              </label>
+            ) : null}
 
             <label htmlFor="share-mine">
               <input

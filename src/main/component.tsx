@@ -210,6 +210,7 @@ function SessionSharePlugin({
 
   return (
     <ShareWindow
+      hasInviteUrl={Boolean(inviteUrl)}
       intl={intl}
       popupWindow={popupWindow}
       newJoinUrl={newJoinUrl}
