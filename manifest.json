@@ -1,5 +1,5 @@
 {
-  "requiredSdkVersion": "~0.0.73 || ^0.1.2",
+  "requiredSdkVersion": "~0.0.73 || ^0.1.2 || ^1.0.0-beta.2",
   "name": "BbbPluginSessionShare",
   "version": "0.0.2",
   "javascriptEntrypointUrl": "BbbPluginSessionShare.js",
